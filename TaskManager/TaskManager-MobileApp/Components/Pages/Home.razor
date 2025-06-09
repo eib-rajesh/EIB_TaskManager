@@ -1,5 +1,146 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+        .dashboard-container {
+            padding: 1rem;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+        }
+        .summary-cards {
+            display: flex;
+            overflow-x: auto;
+            margin: 1rem 0;
+            gap: 0.5rem;
+        }
+        .card {
+            min-width: 100px;
+            background: white;
+            border-radius: 10px;
+            padding: 0.5rem;
+            text-align: center;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .task-list {
+            margin-top: 1rem;
+        }
+        .task-item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .task-details {
+            margin-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        .priority {
+            color: #555;
+        }
+        .due {
+            color: #999;
+        }
+        .fab {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            width: 56px;
+            height: 56px;
+            background-color: #007bff;
+            color: white;
+            font-size: 24px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header">
+            <button onclick="alert('Menu clicked!')">☰</button>
+            <h1>TaskFlow</h1>
+        </header>
+
+        <section class="summary-cards">
+            <div class="card">
+                <span>📝</span>
+                <div>
+                    <strong>To Do</strong>
+                    <p>5</p>
+                </div>
+            </div>
+            <div class="card">
+                <span>⏳</span>
+                <div>
+                    <strong>In Progress</strong>
+                    <p>3</p>
+                </div>
+            </div>
+            <div class="card">
+                <span>✔</span>
+                <div>
+                    <strong>Done</strong>
+                    <p>12</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="task-list">
+            <h2>📋 My Tasks</h2>
+            <div class="task-item">
+                <input type="checkbox" />
+                <div class="task-details">
+                    <p>Buy groceries</p>
+                    <small class="priority">Low</small>
+                    <small class="due">🕒 Due Today</small>
+                </div>
+            </div>
+            <div class="task-item">
+                <input type="checkbox" checked />
+                <div class="task-details">
+                    <p>Finish report</p>
+                    <small class="priority">High</small>
+                    <small class="due">✔ Done</small>
+                </div>
+            </div>
+            <div class="task-item">
+                <input type="checkbox" />
+                <div class="task-details">
+                    <p>Book flight</p>
+                    <small class="priority">Medium</small>
+                    <small class="due">📅 12 Jun</small>
+                </div>
+            </div>
+        </section>
+
+        <button class="fab" onclick="alert('Add Task Clicked!')">+</button>
+    </div>
+</body>
+</html>
+
+
+

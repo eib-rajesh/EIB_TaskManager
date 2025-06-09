@@ -2,14 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>TaskManager_DataAccess</RootNamespace>
+    <RootNamespace>TaskManager_Shared</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
 
 </Project>
